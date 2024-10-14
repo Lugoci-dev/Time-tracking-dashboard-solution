@@ -14,22 +14,17 @@
 }
 body{
     background-color: var(--Very-dark-blue);
-    /* box-sizing: border-box; */
     margin: 0%;
     font-family: 'Rubik', monospace;
     color: #ffffff;
     height: 100vh;
     display: flex;
     align-items: center;
-    /* font-size: 1rem; */
 }
 main{
     width: 77vw;
     height: 36vw;
     margin: auto;
-    /* margin-top: 24vh; */
-    /* align-content: center; */
-    /* align-items: center; */
     display: grid;
     gap: 2vw;
     grid-template-columns: repeat(4, 1fr);
@@ -164,12 +159,11 @@ main section:last-child{
 
 @media (max-Width: 600px) {
     main{
-        padding-top: 28px;
-        padding-bottom: 28px;
         width: 90%;
         height: 100%;
         grid-template-columns: repeat(1, 1fr);
-        gap: 24px
+        gap: 24px;
+        margin-top: 10vh;
     }
     aside{
         display: flex;

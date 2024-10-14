@@ -28,7 +28,6 @@ xhr.onload = () =>{
     alert('Error en la solicitud: '+ xhr.status);
   }
 }
-
 xhr.onerror = ()=>{
   alert('Error en la conexion')
 }
