@@ -1,0 +1,222 @@
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+body{
+    background-color: var(--Very-dark-blue);
+    /* box-sizing: border-box; */
+    margin: 0%;
+    font-family: 'Rubik', monospace;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* font-size: 1rem; */
+}
+main{
+    width: 77vw;
+    height: 36vw;
+    margin: auto;
+    /* margin-top: 24vh; */
+    /* align-content: center; */
+    /* align-items: center; */
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(4, 1fr);
+}
+#avatar div{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.items{
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--Dark-blue);
+    overflow: hidden;
+    border-radius: 12px;
+    min-width: 204px;
+    min-height: 204px;
+}
+.items:first-child{
+    flex-direction: column;
+}
+.icon{
+    position: absolute;
+    top: -5%;
+    margin-right: 16px;
+    width: auto;
+    height: 30%;
+}
+.items article{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    border-radius: 12px;
+}
+.cart{
+    position: relative;
+    background-color: var(--Dark-blue);
+    top: 21%;
+    height: 80%;
+    padding-left: 16px;
+    padding-right: 28px;
+    padding-bottom: 16px;
+}
+.cart:hover{
+    background-color: var(--Desaturated-blue);
+}
+.avatar{
+    background-color: var(--Blue);
+    height: 70%;
+    top: 0;
+    padding: 28px;
+}
+.avatar img{
+    margin-right: 16px;
+    width: 47%;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-bottom: 28px;
+}
+.avatar p{
+    color: var(--Pale-Blue);
+    margin-bottom: 2px;
+}
+.avatar span p{
+    font-size: 2.5rem;
+    font-stretch: condensed;
+    margin: 0;
+    color: #ffffff;
+}
+.cart img{
+    margin-right: 16px;
+    position: absolute;
+    top: 15%;
+    right: 4%;
+    width: auto;
+    height: 2.5%;
+}
+.cart header p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+div p{
+    font-size: 3.5rem;
+    font-stretch: extra-condensed;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+footer{
+    color: var(--Pale-Blue);
+}
+footer p{
+    display: inline;
+    font-size: .9rem;
+    margin-top: 5px;
+}
+button{
+    border: none;
+    margin-left: 28px;
+    align-self: flex-start;
+    background-color: hsl(0, 0%, 100%, 0%);
+    color: var(--Pale-Blue);
+}
+button:hover{
+    color: rgb(255, 255, 255);
+}
+
+main section:first-child{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+main section:nth-child(2){
+    background-color: var(--Light-orange);
+}
+main section:nth-child(3){
+    background-color: var(--Soft-blue);
+}
+main section:nth-child(4){
+    background-color: var(--Light-red);
+}
+main section:nth-child(5){
+    background-color: var(--Lime-green);
+}
+main section:nth-child(6){
+    background-color: var(--Violet);
+}
+main section:last-child{
+    background-color: var(--Soft-orange);
+}
+
+@media (max-Width: 600px) {
+    main{
+        padding-top: 28px;
+        padding-bottom: 28px;
+        width: 90%;
+        height: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px
+    }
+    aside{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #avatar{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: end;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .icon{
+        height: 40%;
+    }
+    .avatar{
+        display: flex;
+        height: 70%;
+    }
+    #avatar img{
+        width: auto;
+        height: 100%;
+    }
+    #avatar aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #avatar aside p{
+        align-self: flex-start;
+        margin: 0;
+    }
+    #avatar aside span{
+        display: block;
+    }
+    #avatar aside span p{
+        font-size: 2rem;   
+    }
+    #avatar div{
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #avatar button{
+        margin-left: 0;
+    }
+}
